@@ -9,24 +9,15 @@
 </head>
 <body>
 	<div id="container">
-		<div id="modePicker">
+		<div id="modePicker" class="hidden">
 			<div class="button" id="onlineButton">Play online</div>
-			<br/>
 			<div class="button" id="offlineButton">Play offline</div>
 		</div>
 		<div id="namePicker" class="hidden">
 			<p>Enter name:</p>
 			<input type="text" id="username"/>
-			<p>Game ID:</p>
-			<input type="text" id="gameID"/>
-			</br>
 			<div class="button" id="hostButton">Host game</div>
-			<br/>
-			<div class="button" id="joinButton">Join game</div>
-		</div>
-		<div id="waitingDisplay" class="hidden">
-			<h1>Waiting for other player...</h1>
-			Game ID: <span id="displayGameID"></span>
+			<div class="button hidden" id="joinButton">Join game</div>
 		</div>
 		<h1 id="gameHeader"></h1>
 		<div id="game" class="hidden"></div>

@@ -100,7 +100,7 @@ body {
   width: 200px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
 }
 
 input
