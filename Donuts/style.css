@@ -72,7 +72,7 @@ body {
 {
 	display: flex;
 	overflow-y: auto;
-	max-height: 30vh;
+	max-height: 25vh;
 	width: calc(var(--size)*6);
 	margin: 8px 0;
 }
