@@ -123,6 +123,11 @@ document.addEventListener('DOMContentLoaded', () =>
 		{
 			e.addEventListener("click", handleClick);
 		});
+		
+		if (gameOver && (isHost || !isOnline))
+		{
+			document.querySelector("#resetButton").classList.remove("hidden");
+		}
 	}
 
 	function initializeBoard()
