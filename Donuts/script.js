@@ -548,6 +548,7 @@ document.addEventListener('DOMContentLoaded', () =>
 		currentPlayer = 'player1';
 		allowedMoves.clear();
 		gameOver = false;
+		logCounter = 1;
 		document.querySelector("#resetButton").classList.add("hidden");
 		sendGameInformation();
 	}
