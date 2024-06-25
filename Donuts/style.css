@@ -68,6 +68,19 @@ body {
     background-image: url('donut2.png'); /* Replace with actual path to player 2 donut image */
 }
 
+.player1, .player2
+{
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.thumbnail
+{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+
 #logFieldset
 {
 	display: flex;

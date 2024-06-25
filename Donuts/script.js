@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () =>
 	{
 		document.querySelector("#modePicker").classList.add("hidden");
 		initializeBoard();
+		setHeader();
 		document.querySelector("#game").classList.remove("hidden");
 		document.querySelector("#logFieldset").classList.remove("hidden");
 	});
@@ -107,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () =>
 		if (data.username)
 		{
 			usernames[(isHost ? 1 : 0)] = data.username;
-			document.querySelector("#gameHeader").innerHTML = usernames.join(" VS. ");
+			setHeader();
+			
 			return;
 		}
 
@@ -146,6 +148,12 @@ document.addEventListener('DOMContentLoaded', () =>
 
 			cell.addEventListener('click', handleClick);
 		}
+	}
+
+	function setHeader()
+	{
+		document.querySelector("#gameHeader").classList.remove("hidden");
+		document.querySelector("#gameHeader").innerHTML = usernames.join(" <div class='player1 thumbnail'></div> VS. ") + " <div class='player2 thumbnail'></div>";
 	}
 
 	function handleClick(event)
