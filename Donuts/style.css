@@ -7,11 +7,13 @@ body {
     margin: 20px auto;
     background-color: #222222;
 	color: white;
+	font-family: Verdana, sans-serif;
 }
 
 h1
 {
 	font-size: 1.5em;
+	margin-top: 0;
 }
 
 #game {
@@ -21,7 +23,7 @@ h1
     gap: 5px;
 }
 
-.cell {
+.c {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,45 +37,39 @@ h1
     background-position: center;
 }
 
-.cell.vertical {
+.c.v {
     background-image: url('vertical.png'); /* Replace with actual path to vertical line image */
 }
 
-.cell.horizontal {
+.c.h {
     background-image: url('horizontal.png'); /* Replace with actual path to horizontal line image */
 }
 
-.cell.diagonal1 {
+.c.d1 {
     background-image: url('diagonal1.png'); /* Replace with actual path to diagonal1 line image */
 }
 
-.cell.diagonal2 {
+.c.d2 {
     background-image: url('diagonal2.png'); /* Replace with actual path to diagonal2 line image */
 }
 
-.cell.highlight {
+.c.h1 {
     background-color: #a0ffa0; /* Highlight color */
 }
 
-.cell.highlight2 {
+.c.h2 {
     background-color: #90b0ff; /* Highlight color */
 }
 
-.donut {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.player1 {
+.p1 {
     background-image: url('donut1.png'); /* Replace with actual path to player 1 donut image */
 }
 
-.player2 {
+.p2 {
     background-image: url('donut2.png'); /* Replace with actual path to player 2 donut image */
 }
 
-.player1, .player2
+.p1, .p2
 {
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover; /* Resize the background image to cover the entire container */
@@ -86,11 +82,17 @@ h1
 	height: 32px;
 }
 
+.importantText
+{
+	font-weight: bold;
+	color: yellow;
+}
+
 #logFieldset
 {
 	display: flex;
 	overflow-y: auto;
-	max-height: 25vh;
+	max-height: 20vh;
 	width: calc(var(--size)*6);
 	margin: 8px 0;
 }
@@ -121,24 +123,34 @@ h1
 }
 
 .button {
-  background-color: #223344; /* Green */
+  background-color: #223344;
   cursor: pointer;
-  border: none;
-  color: white;
+  border: 1px solid white;
   margin-top: 12px;
   padding: 15px 32px;
   width: calc(var(--size)*6 + 27px);
   text-align: center;
   text-decoration: none;
   display: block;
-  font-size: 18px;
+  font-size: calc(var(--size)/6);
   box-sizing: border-box;
+}
+
+.button:hover
+{
+	background-color: #334455;
 }
 
 input
 {
 	box-sizing: border-box;
-	width: 264px;
+	width: calc(var(--size)*6 + 27px);
+}
+
+p
+{
+	font-size: calc(var(--size)/4);
+	margin-bottom: 2px;
 }
 
 .break {

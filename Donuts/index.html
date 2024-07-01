@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donuts</title>
+    <title>Grid Duel</title>
     <link rel="stylesheet" href="style.css">
-	<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
 </head>
 <body>
 	<div id="container">
-		<div id="modePicker" class="hidden">
-			<div class="button" id="onlineButton">Play online</div>
-			<div class="button" id="offlineButton">Play offline</div>
-		</div>
 		<div id="namePicker" class="hidden">
 			<p>Enter name:</p>
-			<input type="text" id="username"/>
+			<input type="text" id="username" minlength="1" required/>
 			<div class="button" id="hostButton">Host game</div>
-			<div class="button hidden" id="joinButton">Join game</div>
+			<div class="button" id="joinButton">Join game</div>
 		</div>
+		<div id="gameList" class="hidden">No games available</div>
 		<h1 id="gameHeader" class="hidden"></h1>
 		<div class="break"></div>
 		<div id="game" class="hidden"></div>
@@ -30,6 +26,25 @@
 		<div class="break"></div>
 		<div class="button hidden" id="resetButton">Restart game</div>
 	</div>
+	<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+	<script>
+	  const firebaseConfig = {
+            apiKey: "AIzaSyC3NVO4v29fE2vFmOUs6M597IZGpZpLFuo",
+            authDomain: "gridduel.firebaseapp.com",
+            databaseURL: "https://gridduel-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "gridduel",
+            storageBucket: "gridduel.appspot.com",
+            messagingSenderId: "1002170020570",
+            appId: "1:1002170020570:web:9ef00b1c752087aa952be3",
+            measurementId: "G-C1JB2T2ZXQ"
+        };
+
+	  firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+	</script>
     <script src="script.js"></script>
 </body>
 </html>
